@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anicé Mwanza</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f2f2f2;
+    }
+    header {
+      background: #002147;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+    nav {
+      background: #1f2f45;
+      color: white;
+      display: none;
+      flex-direction: column;
+    }
+    nav a {
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      border-bottom: 1px solid #444;
+    }
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .dropdown {
+      display: none;<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">Hello World! </h1>
+      <p id="currentTime"></p>
+      <script src="script.js"></script>
+  </body>
+</html>
+background: #333;
+      margin-left: 15px;
+    }
+    .dropdown a {
+      padding-left: 25px;
+    }
+    section {
+      padding: 20px;
+    }
+    footer {
+      background: #002147;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+    }
+    form {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+    }
+    .toggle-btn {
+      background: #555;
+      color: white;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Anicé Mwanza</h1>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="menu">
+  <a href="#accueil">Accueil</a>
+  <a href="#contact">Contact</a>
+
+  <button class="toggle-btn" onclick="toggleDropdown('apprendre')">+ Apprendre</button>
+  <div id="apprendre" class="dropdown">
+    <a href="https://www.google.com/search?q=Infographie+Design" target="_blank">Infographie Design</a><a href="https://www.google.com/search?q=Programmation" target="_blank">Programmation</a>
+    <a href="https://www.google.com/search?q=Développement+Web" target="_blank">Développement Web</a>
+  </div>
+
+  <button class="toggle-btn" onclick="demandeMotDePasse()">+ UAC</button>
+  <div id="uac" class="dropdown" style="display: none;">
+    <a href="#">Résultat</a>
+    <a href="#">Frais Académique</a>
+    <a href="#">Cours IAGE</a>
+  </div>
+
+  <button class="toggle-btn" onclick="toggleDropdown('apropos')">+ À propos</button>
+  <div id="apropos" class="dropdown">
+    <a href="https://www.google.com/search?q=Projets+Anicé" target="_blank">Projets</a>
+    <a href="https://www.google.com/search?q=Connaissances+Anicé" target="_blank">Connaissances</a>
+  </div>
+</nav>
+
+<section id="accueil" style="background-color: #e0f4fa; padding: 20px;">
+  <h2>Bienvenue Sur le site web personnel de Mwanza Anicet</h2>
+  <p>“Le succès est la somme de petits efforts répétés jour après jour.”</p>
+</section>
+
+<section id="contact" style="background-color: #fff4e0; padding: 20px;">
+  <h2>Contact</h2>
+  <p>Email : mayinduanicet@gmail.com</p>
+  <p>WhatsApp : <a href="https://wa.me/243998801820" target="_blank">+243 998 801 820</a></p>
+</section>
+
+<section id="galerie" style="background-color: #e2f5e9; padding: 20px;">
+  <h2>Galerie</h2>
+  <div class="gallery">
+    <img src="photo1.jpg" alt="photo 1">
+    <img src="photo2.jpg" alt="photo 2">
+    <img src="photo3.jpg" alt="photo 3">
+  </div>
+</section>
+
+<section id="formulaire" style="background-color: #ede7f6; padding: 20px;">
+  <h2>Formulaire de contact</h2>
+  <form>
+    <input type="text" placeholder="Votre nom" required>
+    <input type="email" placeholder="Votre email" required>
+    <textarea placeholder="Votre message" rows="4"></textarea><input type="submit" value="Envoyer">
+  </form>
+</section>
+
+
+
+
+<footer>
+  Version 1.0 • © 2025 Développé par Anicé Mwanza
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+  }
+
+  function toggleDropdown(id) {
+    const dropdown = document.getElementById(id);
+    dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+  }
+
+  function demandeMotDePasse() {
+    const mdp = prompt("Mot de passe pour accéder à UAC :");
+    if (mdp === "uac2025") {
+      document.getElementById("uac").style.display = "block";
+    } else {
+      alert("Mot de passe incorrect !");
+    }
+  }
+</script>
+
+</body>
+</html>
